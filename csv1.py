@@ -1,6 +1,4 @@
-import fire
 import csv
-import os.path
 from os import path
 list_of_column_names=[] 
 counts={}
@@ -21,6 +19,3 @@ class CSV:
                 print("Column Not present")
     else:
         print("File doesnot exist or wrong file selected")
-    exit()
-if __name__ == '__main__':
-      fire.Fire(CSV)
