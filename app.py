@@ -21,8 +21,7 @@ class MyClass():
                 else:
                     print("Column Not present")
         else:
-            print("Path Not Valid")
-            
+            print("Path Not Valid")      
 filepath=input("Please enter file path: ")
 myclass=MyClass(filepath)
 myclass.getthecolumn()
