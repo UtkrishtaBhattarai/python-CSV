@@ -1,0 +1,82 @@
+import csv
+import os.path
+from os import path
+filepath=input("please enter file name: ")
+list_of_column_names = [] 
+list1=list()
+
+with open(filepath,'r',newline="") as file:
+    reader=csv.reader(file)
+    writer = csv.writer(file)
+    for rows in reader:
+        list_of_column_names.append(rows)
+
+if path.exists(filepath):
+    with open(filepath, 'r') as file:
+        reader = csv.reader(file)
+        column_check=input("Enter column: ").lower()
+
+        if column_check==list_of_column_names[0][0]:
+            for rows in reader:
+                list1.append(rows[0].split(list_of_column_names[0][0]))
+                d = {x:list1.count(x) for x in list1}
+            print(d)
+
+
+        elif column_check==list_of_column_names[0][1]:
+            for rows in reader:
+                list1.append(rows[1])
+                d = {x:list1.count(x) for x in list1}
+            print (d)
+                    
+
+        elif column_check==list_of_column_names[0][2]:
+            for rows in reader:
+                list1.append(rows[2])
+                d = {x:list1.count(x) for x in list1}
+            print (d)
+
+
+        else:
+            print("Please enter valid column name")
+        
+else:
+    print("the file name you provided is wrong")
+
+
+
+
+
+
+
+
+import csv
+import os.path
+from os import path
+list_of_column_names = [] 
+list1=list()
+
+filepath=input("Please enter the file path: ")
+if path.exists(filepath):
+    column_check=input("Enter Column: ")
+    with open(filepath,'r',newline="") as file:
+        reader=csv.reader(file)
+        writer = csv.writer(file)
+        for rows in reader:
+            list_of_column_names.append(rows)
+            if column_check in list_of_column_names[0]:
+                index=int(list_of_column_names[0].index(column_check))
+                for rows in reader:
+                    list1.append(rows[index].split(list_of_column_names[0][index]))
+                    d = {x:list1.count(x) for x in list1}
+                print(d)
+            else:
+                print("Sorry desired header is not in CSV")
+
+
+
+    
+
+
+
+    

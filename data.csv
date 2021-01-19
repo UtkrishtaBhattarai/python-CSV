@@ -1,0 +1,7 @@
+primaryid,transaction,message
+1,DEBIT,success
+2,CREDIT,failed
+3,DEBIT,failed
+4,CREDIT,success
+5,DEBIT,failed
+6,CREDIT,success
